@@ -15,6 +15,7 @@ import {MatTable, MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartComponent } from './chart/chart.component';
 import { AgChartsAngularModule } from 'ag-charts-angular';
+import { TabNavComponent } from './tab-nav/tab-nav.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AgChartsAngularModule } from 'ag-charts-angular';
     LoginComponent,
     DashboardComponent,
     TableComponent,
-    ChartComponent
+    ChartComponent,
+    TabNavComponent
   ],
   imports: [
     BrowserModule,

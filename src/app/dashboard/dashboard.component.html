@@ -37,5 +37,26 @@
 </div>
 
 
+<app-tab-nav></app-tab-nav>
 
+<div class="col-3 progess-bar-wrap">
+  <div class="progress" style="height: 50px;position: relative;">
+    <div class="sec1">{{probability.high_percent}}</div>
+    <div class="sec2">High Probability to Win</div>
+    <div class="sec3">{{probability.low_count}} Leads</div>
+    <div class="progress-bar" role="progressbar" [ngStyle]="{'width': probability.high_percent + '%' }" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="height: 50px;position: relative;">
+    <div class="sec1">{{probability.high_percent}}</div>
+    <div class="sec2">High Probability to Win</div>
+    <div class="sec3">{{probability.low_count}} Leads</div>
+    <div class="progress-bar" role="progressbar" [ngStyle]="{'width': probability.medium_percent + '%' }"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress" style="height: 50px;position: relative;">
+    <div class="sec1">{{probability.high_percent}}</div>
+    <div class="sec2">High Probability to Win</div>
+    <div class="sec3">{{probability.low_count}} Leads</div>
+    <div class="progress-bar" role="progressbar" [ngStyle]="{'width': probability.low_percent + '%' }" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
 

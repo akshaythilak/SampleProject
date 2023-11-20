@@ -3,19 +3,23 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface CodingParams {
-
   stage_type: string,
   limit: number,
   offset: number,
   search: string,
   ordering: any
 }
+
 @Injectable({
   providedIn: 'root'
 })
 export class LeadsListService {
 
+   headers = new HttpHeaders()
+  .set('BEARER', 'EmKSlliqBeaGRGpaGFpmR0RSudoGatJWA4ceocQ3hUGPkCG625MRMOMbYh5jpU1zQf40anwxdApRXW9fguljSexGiY')
+  .set('USER-ID', 'WGQDW');
 
+   queryParams = new HttpParams();
 
   private baseUrl = 'https://assignment.leadtracker.cied.dev/v1/leads/';
 
@@ -23,20 +27,29 @@ export class LeadsListService {
 
   }
 
-  getEmployee(id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+  postLogin(body: Object): Observable<Object> {
+    return this.http.get(`${this.baseUrl.replace('/leads','/accounts')}login/`, body);
   }
 
-  createEmployee(employee: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, employee);
+
+  getUserDetails(){
+    return this.http.get(`${this.baseUrl.replace('/leads','/accounts')}user/85NPW/`, { 'headers': this.headers });
+
   }
 
-  updateEmployee(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+  getActiveLeadStatus(){
+    return this.http.get(`${this.baseUrl}stage/`, { 'headers': this.headers });
+
   }
 
-  deleteEmployee(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  getProbability(stage_type:CodingParams){
+    this.queryParams = this.queryParams.append("stage_type", stage_type.stage_type);
+    return this.http.get(`${this.baseUrl}probability/analysis/`, { params: this.queryParams,'headers': this.headers });
+  }
+
+  getGraphStage(stage_type:CodingParams){
+    this.queryParams = this.queryParams.append("stage_type", stage_type.stage_type);
+    return this.http.get(`${this.baseUrl}dashboard/graph/`, { params: this.queryParams,'headers': this.headers });
   }
 
   getLeadsList(obj: CodingParams): Observable<any> {
