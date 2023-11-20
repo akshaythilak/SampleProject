@@ -1,0 +1,427 @@
+{
+    "success": true,
+    "detail": "Success",
+    "code": 200,
+    "data": {
+      "count": 5,
+      "total_deal_Value": 5002,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "id": "8J2J7",
+          "name": "Infosys",
+          "forms": [
+            {
+              "submission_id": "84J2P",
+              "form": "XWPQ8",
+              "type": "prospect"
+            }
+          ],
+          "organization": {
+            "id": "5N4EE",
+            "logo": null,
+            "org_profile": [],
+            "is_deleted": false,
+            "name": "Infosys",
+            "email": "asdsa@ddsad.in",
+            "website": "sadas",
+            "country": "asdasd",
+            "team_size": "500-1000",
+            "revenue": "5-10 mio",
+            "address": "asdad",
+            "linked_in": null,
+            "pipdrive_id": 0
+          },
+          "label": [],
+          "stage_contact": null,
+          "category": {
+            "id": "MW2NW",
+            "name": "Agriculture"
+          },
+          "description": "asdasd",
+          "pipedrive": "",
+          "probability": 42.99,
+          "source": "LinkedIn Research",
+          "stage": [
+            {
+              "name": "Initial Interest",
+              "id": "38XV8",
+              "is_active": true,
+              "stage_form_id": "8GZX7",
+              "position": 1,
+              "probability": 42.99,
+              "lead_count": 2,
+              "updated_on": "1693980548.921981",
+              "is_deleted": false,
+              "stage_history_id": null
+            },
+            {
+              "name": "Contact Made",
+              "id": "Z8938",
+              "is_active": true,
+              "stage_form_id": "8JD7R",
+              "position": 0,
+              "probability": 45.19,
+              "lead_count": 7,
+              "updated_on": "1693980547.882151",
+              "is_deleted": false,
+              "stage_history_id": "PW6K8"
+            }
+          ],
+          "type": "active",
+          "created_on": "1693817112",
+          "updated_on": "1693980617",
+          "updater": 47,
+          "dealer_probablity": 0,
+          "deal_value": "2.00",
+          "is_deleted": false,
+          "stage_submission_id": "8GZX7",
+          "current_stage": {
+            "id": "38XV8",
+            "lead_count": 2,
+            "updated_on": "1691745233",
+            "is_deleted": false,
+            "name": "Initial Interest",
+            "is_active": true,
+            "position": 1,
+            "is_default": false,
+            "form": 1
+          },
+          "previous_contact": [],
+          "prospect_history": [
+            {
+              "submission_id": "WDMQE",
+              "form": "XWPQ8",
+              "type": "prospect"
+            }
+          ]
+        },
+        {
+          "id": "WD7YV",
+          "name": "TCS",
+          "forms": [
+            {
+              "submission_id": "8QGNK",
+              "form": "XWPQ8",
+              "type": "prospect"
+            }
+          ],
+          "organization": {
+            "id": "X7R7J",
+            "logo": null,
+            "org_profile": [],
+            "is_deleted": false,
+            "name": "Google",
+            "email": "shalu.shaji+test@gmail.com",
+            "website": "",
+            "country": "",
+            "team_size": "Less than 100",
+            "revenue": "More than 100 mio",
+            "address": "",
+            "linked_in": null,
+            "pipdrive_id": 0
+          },
+          "label": [],
+          "stage_contact": null,
+          "category": {
+            "id": "M8RGW",
+            "name": "Startup"
+          },
+          "description": "fdsf",
+          "pipedrive": "",
+          "probability": 29.81,
+          "source": "",
+          "stage": [
+            {
+              "name": "Contact Made",
+              "id": "Z8938",
+              "is_active": true,
+              "stage_form_id": null,
+              "position": 0,
+              "probability": 17.95,
+              "lead_count": 7,
+              "updated_on": "1693980462.298053",
+              "is_deleted": false,
+              "stage_history_id": "7W4DW"
+            }
+          ],
+          "type": "active",
+          "created_on": "1692758898",
+          "updated_on": "1693980656",
+          "updater": 47,
+          "dealer_probablity": 0,
+          "deal_value": "0.00",
+          "is_deleted": false,
+          "stage_submission_id": null,
+          "current_stage": {
+            "id": "Z8938",
+            "lead_count": 7,
+            "updated_on": "1693900231",
+            "is_deleted": false,
+            "name": "Contact Made",
+            "is_active": true,
+            "position": 0,
+            "is_default": true,
+            "form": 1
+          },
+          "previous_contact": [],
+          "prospect_history": []
+        },
+        {
+          "id": "895J9",
+          "name": "Spacex",
+          "forms": [
+            {
+              "submission_id": "WQGMK",
+              "form": "XWPQ8",
+              "type": "prospect"
+            }
+          ],
+          "organization": {
+            "id": "2NRPK",
+            "logo": null,
+            "org_profile": [],
+            "is_deleted": false,
+            "name": "Spacex",
+            "email": "test@test1.com",
+            "website": "wwww.www.com",
+            "country": "IN",
+            "team_size": "More than 10,000",
+            "revenue": "10-100 mio",
+            "address": "",
+            "linked_in": null,
+            "pipdrive_id": 0
+          },
+          "label": [],
+          "stage_contact": null,
+          "category": {
+            "id": "7W4DW",
+            "name": "Brand"
+          },
+          "description": "Test",
+          "pipedrive": "",
+          "probability": 19.51,
+          "source": "",
+          "stage": [
+            {
+              "name": "First intro meeting",
+              "id": "WYVD8",
+              "is_active": true,
+              "stage_form_id": "83E5R",
+              "position": 2,
+              "probability": 19.51,
+              "lead_count": 1,
+              "updated_on": "1693980929.100162",
+              "is_deleted": false,
+              "stage_history_id": null
+            },
+            {
+              "name": "Contact Made",
+              "id": "Z8938",
+              "is_active": true,
+              "stage_form_id": null,
+              "position": 0,
+              "probability": 10.26,
+              "lead_count": 7,
+              "updated_on": "1693980928.441814",
+              "is_deleted": false,
+              "stage_history_id": "9WEKW"
+            }
+          ],
+          "type": "active",
+          "created_on": "1693836967",
+          "updated_on": "1693980929",
+          "updater": 47,
+          "dealer_probablity": 0,
+          "deal_value": "0.00",
+          "is_deleted": false,
+          "stage_submission_id": "83E5R",
+          "current_stage": {
+            "id": "WYVD8",
+            "lead_count": 1,
+            "updated_on": "1693980498",
+            "is_deleted": false,
+            "name": "First intro meeting",
+            "is_active": true,
+            "position": 2,
+            "is_default": false,
+            "form": 1
+          },
+          "previous_contact": [],
+          "prospect_history": []
+        },
+        {
+          "id": "WKR5G",
+          "name": "Wipro",
+          "forms": [
+            {
+              "submission_id": "85NRM",
+              "form": "XWPQ8",
+              "type": "prospect"
+            },
+            {
+              "submission_id": "WRQMR",
+              "form": "M8RGW",
+              "type": "lead"
+            }
+          ],
+          "organization": {
+            "id": "NM7DM",
+            "logo": null,
+            "org_profile": [],
+            "is_deleted": false,
+            "name": "Wipro",
+            "email": "shalu.shaji+test5@gmail.com",
+            "website": "",
+            "country": "",
+            "team_size": "Less than 100",
+            "revenue": "5-10 mio",
+            "address": "USA",
+            "linked_in": null,
+            "pipdrive_id": 0
+          },
+          "label": [],
+          "stage_contact": null,
+          "category": {
+            "id": "M8RGW",
+            "name": "Startup"
+          },
+          "description": "test5",
+          "pipedrive": "",
+          "probability": 10.36,
+          "source": "Cold Emails",
+          "stage": [
+            {
+              "name": "Workshops Stage",
+              "id": "85NPW",
+              "is_active": true,
+              "stage_form_id": "82N6X",
+              "position": 4,
+              "probability": 10.36,
+              "lead_count": 2,
+              "updated_on": "1693896749.372851",
+              "is_deleted": false,
+              "stage_history_id": "68798"
+            },
+            {
+              "name": "Follow Up Meetings Stage",
+              "id": "P8NJ8",
+              "is_active": true,
+              "stage_form_id": "WKZ7N",
+              "position": 3,
+              "probability": 12.18,
+              "lead_count": 1,
+              "updated_on": "1693891697.7",
+              "is_deleted": false,
+              "stage_history_id": "M8VMW"
+            },
+            {
+              "name": "Contact Made",
+              "id": "Z8938",
+              "is_active": true,
+              "stage_form_id": null,
+              "position": 0,
+              "probability": 3.85,
+              "lead_count": 7,
+              "updated_on": "1692704721.726974",
+              "is_deleted": false,
+              "stage_history_id": "XWPQ8"
+            }
+          ],
+          "type": "active",
+          "created_on": "1692703794",
+          "updated_on": "1693980669",
+          "updater": 47,
+          "dealer_probablity": 10,
+          "deal_value": "5000.00",
+          "is_deleted": false,
+          "stage_submission_id": "82N6X",
+          "current_stage": {
+            "id": "85NPW",
+            "lead_count": 2,
+            "updated_on": "1687256794",
+            "is_deleted": false,
+            "name": "Workshops Stage",
+            "is_active": true,
+            "position": 4,
+            "is_default": false,
+            "form": 1
+          },
+          "previous_contact": [],
+          "prospect_history": [
+            {
+              "submission_id": "8MRE3",
+              "form": "XWPQ8",
+              "type": "prospect"
+            }
+          ]
+        },
+        {
+          "id": "853E6",
+          "name": "QBurst",
+          "forms": [],
+          "organization": {
+            "id": "YRPV4",
+            "logo": null,
+            "org_profile": [],
+            "is_deleted": false,
+            "name": "QBurst",
+            "email": "ss@ss.com",
+            "website": "",
+            "country": "",
+            "team_size": "1000-10,000",
+            "revenue": "1-5 mio",
+            "address": "",
+            "linked_in": null,
+            "pipdrive_id": 0
+          },
+          "label": [],
+          "stage_contact": null,
+          "category": {
+            "id": "9WGD8",
+            "name": "CB"
+          },
+          "description": "test",
+          "pipedrive": "",
+          "probability": 7.32,
+          "source": "",
+          "stage": [
+            {
+              "name": "Contact Made",
+              "id": "Z8938",
+              "is_active": true,
+              "stage_form_id": null,
+              "position": 0,
+              "probability": 7.32,
+              "lead_count": 7,
+              "updated_on": "1693980752.680624",
+              "is_deleted": false,
+              "stage_history_id": null
+            }
+          ],
+          "type": "active",
+          "created_on": "1693980752",
+          "updated_on": "1693980752",
+          "updater": 47,
+          "dealer_probablity": 0,
+          "deal_value": "0.00",
+          "is_deleted": false,
+          "stage_submission_id": null,
+          "current_stage": {
+            "id": "Z8938",
+            "lead_count": 7,
+            "updated_on": "1693900231",
+            "is_deleted": false,
+            "name": "Contact Made",
+            "is_active": true,
+            "position": 0,
+            "is_default": true,
+            "form": 1
+          },
+          "previous_contact": [],
+          "prospect_history": []
+        }
+      ]
+    }
+  }
