@@ -18,3 +18,19 @@
     top: 12px;
     right: 4px;
 }
+// .graph-container{
+//     margin: 15px 35px 15px 35px;
+// }
+.header{
+    display: flex;
+}
+
+.flex{
+    flex-direction: row;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }

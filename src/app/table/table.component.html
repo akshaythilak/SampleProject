@@ -1,55 +1,56 @@
 <div class="example-container mat-elevation-z8">
 	<div class="">
-		<div class="row ">
-			<span>asdfghjkl</span>
-		  <div class="col-2 search-box">
-			<mat-form-field>
-			  <input matInput type="text" max="100" [(ngModel)]="namespace" (keydown)="selectChange($event.target)"/>
-			</mat-form-field>
-		  </div>
+		<div class="row">
+			<div class="col-md-6 col-lg-2 col-sm-6">Recently Active Leads</div>
+			<div class="col-md-6 col-lg-3 col-sm-6 search-box">
+				<mat-form-field>
+					<input matInput type="text" max="100" [(ngModel)]="namespace"
+						(keydown)="selectChange($event.target)" />
+				</mat-form-field>
+			</div>
 		</div>
 
-	<mat-table #table [dataSource]="passengerSearchReadModels">
+		<mat-table #table [dataSource]="passengerSearchReadModels">
 
-		<ng-container matColumnDef="LeadName">
-			<mat-header-cell *matHeaderCellDef> Lead name </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-		</ng-container>
+			<ng-container matColumnDef="LeadName">
+				<mat-header-cell *matHeaderCellDef> Lead name </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+			</ng-container>
 
-		<!-- Name Column -->
-		<ng-container matColumnDef="DateAdded">
-			<mat-header-cell *matHeaderCellDef> Date added </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.updated_on}} </mat-cell>
-		</ng-container>
+			<!-- Name Column -->
+			<ng-container matColumnDef="DateAdded">
+				<mat-header-cell *matHeaderCellDef> Date added </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.updated_on}} </mat-cell>
+			</ng-container>
 
-		<!-- Weight Column -->
-		<ng-container matColumnDef="Probability">
-			<mat-header-cell *matHeaderCellDef> Probability </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.probability}} </mat-cell>
-		</ng-container>
+			<!-- Weight Column -->
+			<ng-container matColumnDef="Probability">
+				<mat-header-cell *matHeaderCellDef> Probability </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.probability}} </mat-cell>
+			</ng-container>
 
-		<!-- Symbol Column -->
-		<ng-container matColumnDef="TeamSize">
-			<mat-header-cell *matHeaderCellDef> Team Size </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.organization.team_size}} </mat-cell>
-		</ng-container>
+			<!-- Symbol Column -->
+			<ng-container matColumnDef="TeamSize">
+				<mat-header-cell *matHeaderCellDef> Team Size </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.organization.team_size}} </mat-cell>
+			</ng-container>
 
-		<ng-container matColumnDef="Location">
-			<mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.organization.country}} </mat-cell>
-		</ng-container>
+			<ng-container matColumnDef="Location">
+				<mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.organization.country}} </mat-cell>
+			</ng-container>
 
-		<ng-container matColumnDef="Revenue">
-			<mat-header-cell *matHeaderCellDef> Revenue </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.organization.revenue}} </mat-cell>
-		</ng-container>
+			<ng-container matColumnDef="Revenue">
+				<mat-header-cell *matHeaderCellDef> Revenue </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.organization.revenue}} </mat-cell>
+			</ng-container>
 
-		<ng-container matColumnDef="Category">
-			<mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
-			<mat-cell *matCellDef="let element"> {{element.category.name}} </mat-cell>
-		</ng-container>
+			<ng-container matColumnDef="Category">
+				<mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.category.name}} </mat-cell>
+			</ng-container>
 
-		<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-		<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-	</mat-table>
-</div>
+			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+			<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+		</mat-table>
+	</div>
