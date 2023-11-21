@@ -38,6 +38,11 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  displayLeadCount(count: number): string {
+    const value = count && count < 10 ? `0${count}` : `${count}` || 0
+    return `${value} Leads`
+  }
+
   logout() {
     localStorage.clear();
     this.router.navigateByUrl('/');
