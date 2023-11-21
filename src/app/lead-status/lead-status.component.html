@@ -1,0 +1,15 @@
+<h5>Active Leads Status</h5>
+<ng-container *ngIf="activeLeadStatus?.length; else noLeads">
+    <div class="row">
+        <div class="card col-lg-2 col-md-4 col-sm-2 cols-xs-1 m-2" *ngFor="let lead of activeLeadStatus; index as i">
+            <div class="card-body">
+                <span class="fs-6">{{lead?.name || ''}}</span>
+                <h6 class="card-subtitle mb-2 text-muted">{{displayLeadCount(lead?.lead_count)}}</h6>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #noLeads>
+    <span class="">No Active Lead Status</span>
+</ng-template>

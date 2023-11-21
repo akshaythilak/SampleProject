@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
 import { TabNavComponent } from './tab-nav/tab-nav.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { LeadStatusComponent } from './lead-status/lead-status.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
     DashboardComponent,
     TableComponent,
     BarChartComponent,
-    TabNavComponent
+    TabNavComponent,
+    LeadStatusComponent
   ],
   imports: [
     BrowserModule,
