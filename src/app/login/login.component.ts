@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {  FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LeadsListService } from '../services/leads-list.service';
 
 @Component({
   selector: 'app-login',
@@ -11,35 +12,49 @@ export class LoginComponent {
 
   formSubmitted = false;
   loginForm!: FormGroup;
-  emailAddress: any;
+  username: any;
   password: any;
+  errorMessage: string = '';
 
-  constructor(private fb: FormBuilder,private router: Router){}
+  constructor(private fb: FormBuilder, private router: Router, private LeadsListService: LeadsListService) { }
 
   ngOnInit(): void {
     this.createUserForm();
   }
 
-  createUserForm() { 
+  createUserForm() {
     this.loginForm = this.fb.group({
-      emailAddress: this.fb.control('', [Validators.required]),
+      username: this.fb.control('', [Validators.required]),
       password: this.fb.control('', [Validators.required])
     })
-   
+
   }
   get form() {
     return this.loginForm.controls;
   }
 
-  checkLogin(){
+  checkLogin() {
     this.formSubmitted = true;
     if (this.loginForm.valid) {
       const params = {
-        emailAddress: this.loginForm.controls['emailAddress'].value,
+        username: this.loginForm.controls['username'].value,
         password: this.loginForm.controls['password'].value,
+        device_id: 'fgdg'
       }
       console.log(params)
-      this.router.navigateByUrl('/dashboard');
+      this.LeadsListService.userLogin(params)
+      .subscribe({
+        next: (result:any) => {
+          localStorage.setItem('userId', result?.data?.id)
+          localStorage.setItem('token', result?.data?.token)
+          this.router.navigateByUrl('/dashboard');
+        },
+        error: error => {
+          if(error.error){ 
+            this.errorMessage = error.error?.detail?.detail
+          }
+        }
+    });
     }
   }
 

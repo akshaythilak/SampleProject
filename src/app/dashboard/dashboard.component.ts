@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LeadsListService } from '../services/leads-list.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   stage: Array<any> = []
   graph: Array<any> = []
   public isCollapsed = true;
-  constructor(private LeadsListService: LeadsListService) { }
+  constructor(private LeadsListService: LeadsListService, private router: Router) { }
   ngOnInit() {
     this.LeadsListService.getProbability({
       stage_type: 'active',
@@ -35,5 +36,10 @@ export class DashboardComponent implements OnInit {
       this.graph = value?.data?.graph
       this.stage = value?.data?.stage_type_count
     })
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/');
   }
 }
