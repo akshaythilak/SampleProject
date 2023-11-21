@@ -21,35 +21,33 @@ export class LeadsListService {
 
    queryParams = new HttpParams();
 
-  private baseUrl = 'https://assignment.leadtracker.cied.dev/v1/leads/';
+  private baseUrl = 'https://assignment.leadtracker.cied.dev/v1/';
 
   constructor(private http: HttpClient) {
 
   }
 
-  postLogin(body: Object): Observable<Object> {
-    return this.http.get(`${this.baseUrl.replace('/leads','/accounts')}login/`, body);
+  userLogin(body: Object): Observable<Object> {
+    return this.http.get(`${this.baseUrl}login/`, body);
   }
 
 
-  getUserDetails(){
-    return this.http.get(`${this.baseUrl.replace('/leads','/accounts')}user/85NPW/`, { 'headers': this.headers });
-
+  getUserDetails(userId : string){
+    return this.http.get(`${this.baseUrl}user/${userId}`, { 'headers': this.headers });
   }
 
   getActiveLeadStatus(){
-    return this.http.get(`${this.baseUrl}stage/`, { 'headers': this.headers });
-
+    return this.http.get(`${this.baseUrl}leads/stage/`, { 'headers': this.headers });
   }
 
   getProbability(stage_type:CodingParams){
     this.queryParams = this.queryParams.append("stage_type", stage_type.stage_type);
-    return this.http.get(`${this.baseUrl}probability/analysis/`, { params: this.queryParams,'headers': this.headers });
+    return this.http.get(`${this.baseUrl}leads/probability/analysis/`, { params: this.queryParams,'headers': this.headers });
   }
 
   getGraphStage(stage_type:CodingParams){
     this.queryParams = this.queryParams.append("stage_type", stage_type.stage_type);
-    return this.http.get(`${this.baseUrl}dashboard/graph/`, { params: this.queryParams,'headers': this.headers });
+    return this.http.get(`${this.baseUrl}leads/dashboard/graph/`, { params: this.queryParams,'headers': this.headers });
   }
 
   getLeadsList(obj: CodingParams): Observable<any> {
@@ -63,6 +61,6 @@ export class LeadsListService {
     queryParams = queryParams.append("offset", obj.offset);
     queryParams = queryParams.append("search", obj.search);
     queryParams = queryParams.append("ordering", obj.ordering);
-    return this.http.get(`${this.baseUrl}`, { params: queryParams,'headers': headers });
+    return this.http.get(`${this.baseUrl}leads/`, { params: queryParams,'headers': headers });
   }
 }

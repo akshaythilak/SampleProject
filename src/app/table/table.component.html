@@ -4,7 +4,7 @@
 			<span>asdfghjkl</span>
 		  <div class="col-2 search-box">
 			<mat-form-field>
-			  <input matInput type="text" max="100" [(ngModel)]="namespace" (change)="selectChange($event.target)"/>
+			  <input matInput type="text" max="100" [(ngModel)]="namespace" (keydown)="selectChange($event.target)"/>
 			</mat-form-field>
 		  </div>
 		</div>
