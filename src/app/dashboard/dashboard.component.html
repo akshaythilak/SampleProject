@@ -1,9 +1,24 @@
 <div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark d-flex justify-content-between">
+    <div class="ml-2 mr-2">
+      <img src="../../assets/logo.png" alt="" width="45" height="25">
+      <button type="button" class="btn">Dashboard</button>
+      <button type="button" class="btn border-0" disabled>Leads</button>
+    </div>
+    <div class="d-flex flex-row">
+      <input class="form-control mr-sm-2 mr-lg-3 border" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 mx-3 my-sm-0 border" type="submit">Search</button>
+    </div>
+    <div>
+      <img src="../../assets/img_avatar.png" alt="Avatar" class="avatar">
+      <span class="mx-2">{{name}}</span>
+      <button type="button" button type="button" class="btn btn-dark" (click)="logout()">
+        <img src="../../assets/settings.png" width="30" height="30">
+      </button>
     <button type="button" button type="button" class="btn btn-dark" (click)="logout()">
-      <img src="../../assets/logout.png">
+      <img src="../../assets/logout.png" width="30" height="30">
     </button>
+  </div>
   </nav>
 </div>
 
@@ -17,7 +32,7 @@
 
   <div class="graph-container">
     <div class="row">
-      <div class="col-lg-4 col-md-5 col-sm-12 progess-bar-wrap mt-3">
+      <div class="col-lg-4 col-md-6 col-sm-12 progess-bar-wrap mt-3">
         <div class="progress bg-white" style="height: 50px;position: relative;">
           <div class="sec1">{{probability?.high_percent}}%
             <span class="p-3 text-md">High Probability to Win</span>

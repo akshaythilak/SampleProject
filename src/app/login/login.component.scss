@@ -1,6 +1,12 @@
 
-.login {
-    // background-image:  url('../../assets/login.png');
-    background: linear-gradient(0deg, rgba(31, 34, 40, 0.50) 0%, rgba(31, 34, 40, 0.50) 100%), url('../../assets/login.png'), 
-    lightgray -379.924px -921.25px / 254.8% 373.242% no-repeat;
-} 
+.flex-right{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 35px;
+}
+
+.left-panel{
+    position: absolute;
+    width: 97%;
+    height: -webkit-fill-available;
+}

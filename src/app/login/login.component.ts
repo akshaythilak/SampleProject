@@ -45,9 +45,9 @@ export class LoginComponent {
       this.LeadsListService.userLogin(params)
       .subscribe({
         next: (result:any) => {
-          localStorage.setItem('userId', result?.data?.id)
-          localStorage.setItem('token', result?.data?.token)
-          this.router.navigateByUrl('/dashboard');
+          localStorage.setItem('userId', result?.data?.id);
+          localStorage.setItem('token', result?.data?.token);
+            this.router.navigateByUrl('/dashboard'); 
         },
         error: error => {
           if(error.error){ 

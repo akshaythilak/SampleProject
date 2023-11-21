@@ -1,35 +1,34 @@
 <div class="example-container mat-elevation-z8">
-	<div class="">
+	<div class="fw-bolder">
 		<div class="row">
-			<div class="col-md-6 col-lg-2 col-sm-6">Recently Active Leads</div>
-			<div class="col-md-6 col-lg-3 col-sm-6 search-box">
-				<mat-form-field>
-					<input matInput type="text" max="100" [(ngModel)]="namespace"
-						(keydown)="selectChange($event.target)" />
-				</mat-form-field>
+			<div class="col-md-6 col-lg-3 col-sm-6 flex">Recently Active Leads</div>
+			<div class="col-md-6 col-lg-4 col-sm-6">
+				<input class="form-control mr-sm-2 mr-lg-3 border" max="100" type="search" placeholder="Search"
+					aria-label="Search" [(ngModel)]="namespace" (keydown)="selectChange($event.target)">
 			</div>
 		</div>
 
 		<mat-table #table [dataSource]="passengerSearchReadModels">
 
 			<ng-container matColumnDef="LeadName">
-				<mat-header-cell *matHeaderCellDef> Lead name </mat-header-cell>
+				<mat-header-cell class="header-cell" *matHeaderCellDef> Lead name </mat-header-cell>
 				<mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
 			</ng-container>
 
-			<!-- Name Column -->
 			<ng-container matColumnDef="DateAdded">
 				<mat-header-cell *matHeaderCellDef> Date added </mat-header-cell>
 				<mat-cell *matCellDef="let element"> {{element.updated_on}} </mat-cell>
 			</ng-container>
 
-			<!-- Weight Column -->
 			<ng-container matColumnDef="Probability">
 				<mat-header-cell *matHeaderCellDef> Probability </mat-header-cell>
-				<mat-cell *matCellDef="let element"> {{element.probability}} </mat-cell>
+				<mat-cell *matCellDef="let element">
+					<span class="badge"
+						[ngClass]="{'high':element.probability > 30 ,'medium':element.probability > 20}">{{element.probability
+						| transformData}}</span>
+				</mat-cell>
 			</ng-container>
 
-			<!-- Symbol Column -->
 			<ng-container matColumnDef="TeamSize">
 				<mat-header-cell *matHeaderCellDef> Team Size </mat-header-cell>
 				<mat-cell *matCellDef="let element"> {{element.organization.team_size}} </mat-cell>
@@ -53,4 +52,7 @@
 			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 			<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 		</mat-table>
+		<div class="d-flex justify-content-center">
+			<button type="button" class="btn btn-primary rounded-pill">View all</button>
+		</div>
 	</div>

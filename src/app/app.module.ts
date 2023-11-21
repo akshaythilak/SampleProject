@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTable, MatTableModule } from '@angular/material/table';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgApexchartsModule } from "ng-apexcharts";
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { TableComponent } from './table/table.component';
 import { TabNavComponent } from './tab-nav/tab-nav.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LeadStatusComponent } from './lead-status/lead-status.component';
+import { HttpInterceptor } from './interceptor/http.interceptor';
+import { TransformDataPipe } from './pipe/transform-data.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { LeadStatusComponent } from './lead-status/lead-status.component';
     TableComponent,
     BarChartComponent,
     TabNavComponent,
-    LeadStatusComponent
+    LeadStatusComponent,
+    TransformDataPipe
   ],
   imports: [
     BrowserModule,
@@ -37,9 +40,9 @@ import { LeadStatusComponent } from './lead-status/lead-status.component';
     MatFormFieldModule, 
     MatInputModule,
     HttpClientModule,
-    NgApexchartsModule
+    NgApexchartsModule,
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi:true}, TransformDataPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,13 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  name = 'Angular';
+  name = '';
   probability: any
   stage: Array<any> = []
   graph: Array<any> = []
   public isCollapsed = true;
   constructor(private LeadsListService: LeadsListService, private router: Router) { }
   ngOnInit() {
+    this.LeadsListService.getUserDetails(localStorage.getItem("userId") ).subscribe((user:any) => {
+      this.name = user?.data.first_name
+      console.log(user)
+    })
     this.LeadsListService.getProbability({
       stage_type: 'active',
       limit: 0,
@@ -46,5 +50,12 @@ export class DashboardComponent implements OnInit {
   logout() {
     localStorage.clear();
     this.router.navigateByUrl('/');
+  }
+
+  userDetails(){
+    this.LeadsListService.getUserDetails(localStorage.getItem("userId") ).subscribe((user:any) => {
+      this.name = user?.first_name
+      console.log(user)
+    })
   }
 }

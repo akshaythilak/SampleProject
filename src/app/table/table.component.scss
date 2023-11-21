@@ -1,6 +1,38 @@
-.search-box{
-    border: 1px solid red;
-    border-radius: 20px;
-    padding: 10px;
-    margin-left: 5px;
+.search-box {
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 5px;
+}
+.border {
+  border-radius: 25px;
+}
+mat-row,
+mat-header-row {
+  border-style: none;
+  padding: 5px;
+  background: white;
+  margin: 8px;
+  border-radius: 10px;
+}
+mat-header-cell {
+  color: grey;
+  font-size: 12px;
+}
+mat-cell {
+  font-size: 14px;
+}
+.badge{
+    background: #F8CDD9;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 47px;
+    font-size: 12px;
+    color: black;
+    &.medium{
+        background: #F9D8F8;
+    }
+    &.high{
+        background: #C9ECDC;
+    }
 }

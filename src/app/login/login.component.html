@@ -1,13 +1,15 @@
-<div class="container-fluid min-vh-100 d-flex flex-column">
+<div class="container-fluid min-vh-100 d-flex flex-column font-weight-bold">
     <div class="row flex-grow-1">
-        <div class="col-md-6 login">
-            <span class="text-white fs-1 fw-bold">All I need to tell you is Listen</span>
+        <div class="col-md-6 login position-relative">
+            <div class="left-panel">
+                <img src="../../assets/login-img.png" alt="" width="100%" height="100%">
+            </div>
         </div>
-        <div class="col-md-6">
-            <div class="">Welcome!</div>
-            <span>Login with username and password</span>
+        <div class="col-md-6 flex flex-column font-weight-bold">
             <div>
                 <form class="validate-form" [formGroup]="loginForm">
+                    <div class="flex-right">Welcome!</div>
+                    <div class="my-4">Login with username and password</div>
                     <div>
                         <label for="username" class="form-label">Email address</label>
                         <input type="email" class="form-control form-control-lg text-sm" id="username" name="username"
@@ -28,7 +30,8 @@
                         </div>
                     </div>
                     <div class="invalid-error" *ngIf="formSubmitted && form['password'].errors">
-                        <span *ngIf="formSubmitted && form['password'].errors?.['required']" class="text-danger text-sm">
+                        <span *ngIf="formSubmitted && form['password'].errors?.['required']"
+                            class="text-danger text-sm">
                             Password required.
                         </span>
                     </div>
@@ -40,9 +43,9 @@
                             {{errorMessage}}
                         </span>
                     </div>
-                    <span class="flex-column text-center">
+                    <div class="flex-column text-center">
                         Don’t have an account? <a href="#">Signup</a>
-                    </span>
+                    </div>
                 </form>
             </div>
         </div>
