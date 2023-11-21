@@ -17,7 +17,7 @@
 
   <div class="graph-container">
     <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-12 progess-bar-wrap mt-3">
+      <div class="col-lg-4 col-md-5 col-sm-12 progess-bar-wrap mt-3">
         <div class="progress bg-white" style="height: 50px;position: relative;">
           <div class="sec1">{{probability?.high_percent}}%
             <span class="p-3 text-md">High Probability to Win</span>
@@ -43,16 +43,16 @@
             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
       </div>
-      <div class="col-lg-9 col-md-9 col-sm-12" *ngIf="graph.length">
+      <div class="col-lg-8 col-md-7 col-sm-12" *ngIf="graph.length">
         <app-bar-chart [graphState]="graph"></app-bar-chart>
       </div>
+      <div class="col-12 my-4">
+        <app-lead-status></app-lead-status>
+      </div>
+      <div class="col-12 my-4">
+        <app-table></app-table>
+      </div>
     </div>
-  </div>
-  <div class="my-4">
-    <app-lead-status></app-lead-status>
-  </div>
-  <div class="my-4">
-    <app-table></app-table>
   </div>
 
 </div>
