@@ -18,6 +18,7 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LeadStatusComponent } from './lead-status/lead-status.component';
 import { HttpInterceptor } from './interceptor/http.interceptor';
 import { TransformDataPipe } from './pipe/transform-data.pipe';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TransformDataPipe } from './pipe/transform-data.pipe';
     BarChartComponent,
     TabNavComponent,
     LeadStatusComponent,
-    TransformDataPipe
+    TransformDataPipe,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

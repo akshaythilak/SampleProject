@@ -4,9 +4,11 @@
   padding: 10px;
   margin-left: 5px;
 }
+
 .border {
   border-radius: 25px;
 }
+
 mat-row,
 mat-header-row {
   border-style: none;
@@ -15,24 +17,55 @@ mat-header-row {
   margin: 8px;
   border-radius: 10px;
 }
+
 mat-header-cell {
   color: grey;
   font-size: 12px;
 }
+
 mat-cell {
   font-size: 14px;
 }
-.badge{
-    background: #F8CDD9;
-    padding: 4px 8px;
-    text-align: center;
-    border-radius: 47px;
-    font-size: 12px;
-    color: black;
-    &.medium{
-        background: #F9D8F8;
-    }
-    &.high{
-        background: #C9ECDC;
-    }
+
+.badge {
+  background: #F8CDD9;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 47px;
+  font-size: 12px;
+  color: #8E4358;
+  font-weight: 600;
+
+  &.medium {
+    background: #F9D8F8;
+    color: #853282;
+  }
+
+  &.high {
+    background: #C9ECDC;
+    color: #3C7E60;
+  }
+
+}
+
+.mobile-label {
+  display: none;
+}
+
+@media(max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+        font-weight: 600;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row { 
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
 }

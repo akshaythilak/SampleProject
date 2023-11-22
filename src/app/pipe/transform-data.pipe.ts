@@ -5,15 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TransformDataPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-
+  transform(value: unknown): unknown {
     return this.getSeverity(value);
   }
-  getSeverity(value:any){
-    if(value >30){
+
+  getSeverity(value: any) {
+    if (value > 30) {
       return 'High'
     }
-    else if(value >20){
+    else if (value > 20) {
       return 'Medium'
     }
     return 'Low'

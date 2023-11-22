@@ -14,12 +14,9 @@ export class DashboardComponent implements OnInit {
   stage: Array<any> = []
   graph: Array<any> = []
   public isCollapsed = true;
-  constructor(private LeadsListService: LeadsListService, private router: Router) { }
+  constructor(private LeadsListService: LeadsListService) { }
   ngOnInit() {
-    this.LeadsListService.getUserDetails(localStorage.getItem("userId") ).subscribe((user:any) => {
-      this.name = user?.data.first_name
-      console.log(user)
-    })
+  
     this.LeadsListService.getProbability({
       stage_type: 'active',
       limit: 0,
@@ -45,11 +42,6 @@ export class DashboardComponent implements OnInit {
   displayLeadCount(count: number): string {
     const value = count && count < 10 ? `0${count}` : `${count}` || 0
     return `${value} Leads`
-  }
-
-  logout() {
-    localStorage.clear();
-    this.router.navigateByUrl('/');
   }
 
   userDetails(){

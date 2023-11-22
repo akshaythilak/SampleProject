@@ -4,7 +4,6 @@ import {
   HttpHandler,
   HttpEvent,
   HttpInterceptor as interceptor,
-  HttpHeaders
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 

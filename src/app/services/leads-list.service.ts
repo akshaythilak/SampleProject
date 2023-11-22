@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface listParams {
@@ -20,9 +20,7 @@ export class LeadsListService {
 
   private baseUrl = 'https://assignment.leadtracker.cied.dev/v1/';
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) {}
 
   userLogin(body: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}accounts/login/`, body);

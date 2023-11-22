@@ -1,7 +1,7 @@
 <div class="example-container mat-elevation-z8">
-	<div class="fw-bolder">
+	<div class="fw-bold">
 		<div class="row">
-			<div class="col-md-6 col-lg-3 col-sm-6 flex">Recently Active Leads</div>
+			<div class="col-md-6 col-lg-3 col-sm-6 flex">Recently active leads</div>
 			<div class="col-md-6 col-lg-4 col-sm-6">
 				<input class="form-control mr-sm-2 mr-lg-3 border" max="100" type="search" placeholder="Search"
 					aria-label="Search" [(ngModel)]="namespace" (keydown)="selectChange($event.target)">
@@ -17,20 +17,27 @@
 
 			<ng-container matColumnDef="DateAdded">
 				<mat-header-cell *matHeaderCellDef> Date added </mat-header-cell>
-				<mat-cell *matCellDef="let element"> {{element.updated_on}} </mat-cell>
+				<mat-cell *matCellDef="let element"> {{formatDate(element.created_on) | date : "dd MMM yyyy" |
+					uppercase}} </mat-cell>
+			</ng-container>
+
+			<ng-container matColumnDef="CurrentStage">
+				<mat-header-cell *matHeaderCellDef> Current stage </mat-header-cell>
+				<mat-cell *matCellDef="let element"> {{element.current_stage.name}} </mat-cell>
 			</ng-container>
 
 			<ng-container matColumnDef="Probability">
 				<mat-header-cell *matHeaderCellDef> Probability </mat-header-cell>
 				<mat-cell *matCellDef="let element">
 					<span class="badge"
-						[ngClass]="{'high':element.probability > 30 ,'medium':element.probability > 20}">{{element.probability
-						| transformData}}</span>
+						[ngClass]="{'high':element.probability > 30 ,'medium':element.probability > 20 }">
+						{{element.probability | transformData}}
+					</span>
 				</mat-cell>
 			</ng-container>
 
 			<ng-container matColumnDef="TeamSize">
-				<mat-header-cell *matHeaderCellDef> Team Size </mat-header-cell>
+				<mat-header-cell *matHeaderCellDef> Team size </mat-header-cell>
 				<mat-cell *matCellDef="let element"> {{element.organization.team_size}} </mat-cell>
 			</ng-container>
 
