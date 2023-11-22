@@ -12,7 +12,7 @@
         <img [src]="user?.image !== null ? user.image : '../../assets/avatar.png'" alt="Avatar" class="avatar">
         <span class="mx-2 text-white">{{user?.first_name}} {{user?.last_name}}</span>
         <button type="button" button type="button" class="btn btn-dark">
-            <img src="../../assets/settings.png" width="30" height="30">
+            <img class="settings" src="../../assets/settings.png" width="30" height="30">
         </button>
         <button type="button" button type="button" class="btn btn-dark" (click)="logout()">
             <img src="../../assets/logout.png" width="30" height="30">
